@@ -26,11 +26,41 @@ hideTheDino.style.display = 'none';
 
 // Change the first dinosaur image so that the image's dimensions are 324 pixels wide.
 const firstDinoPic = document.querySelector('#triceratops');
-firstDinoPic.height =  324;
+firstDinoPic.style.width =  "324px";
 
 
 
 
 
 // Add an event listener to the span with the class mess-with-me so that when it is clicked, the font color changes to orange.
-.addEventListener
+
+messWithMe.addEventListener('click', onClick); 
+function onClick(){
+        messWithMe.style.color = "orange"
+    }
+
+
+
+
+
+// Add an event listener to the first dinosaur so that when they are clicked, they receive a red border.
+
+firstDinoPic.addEventListener('click', onClick2);
+function onClick2() {
+    firstDinoPic.style.border = '5px solid red';
+}
+
+
+
+
+
+// Add an event listener to the feathered dinosaur, so that when they are clicked, they become 50% transparent.
+
+const halfOpacity = document.querySelector('#feathers');
+halfOpacity.addEventListener('click', onClick3);
+function onClick3() {
+    halfOpacity.style.opacity = '0.5';
+}
+
+// Add an event listener to the "Switch Background Color" button so that when it is clicked, we switch the background color of the row of dinosaurs to a color of your choice.
+
